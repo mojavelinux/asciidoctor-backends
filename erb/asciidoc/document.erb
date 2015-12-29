@@ -1,0 +1,10 @@
+<%
+if has_header? %>= <%= doctitle %>
+<%
+  if (attr? 'author') or (attr? 'email')
+    if attr? 'author' %><%= attr 'author' %><% end
+    if attr? 'email' %> <<%= attr 'email' %>><% end
+  end
+end %>
+
+<%= content %>
